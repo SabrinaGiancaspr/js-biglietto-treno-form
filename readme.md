@@ -18,6 +18,10 @@
   -selezionare l'elemento input tramite ID
   -recuperare il valore e lo salvo nella variabile
 
+-creare selection se minorenne maggiorenne o over65
+  -selezionare l'elemento input tramite ID
+  -recuperare il valore e lo salvo nella variabile
+  
 -definire il prezzo fisso per km (0.21 euro)
   -assegnare variabile
   -dichiarare variabile prezzo fisso per km
