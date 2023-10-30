@@ -4,15 +4,18 @@
 let km;
 let inputDOMElementKm = document.getElementById('km');
 console.log(inputDOMElementKm);
+ let final = document.querySelector('.final-price')
 
 // prezzo per km 
 let priceForKm;
 priceForKm = 0.21;
 
+
+  
 // bottone hmtl 
 
 const btnDOMElement = document.getElementById('btn-calc')
-console.log(btnDOMElement);
+// console.log(btnDOMElement);
 
 // percentuale 20% 
 let percentDiscountUnderage = 20;
@@ -22,21 +25,24 @@ let percentDiscountOver65 = 40;
 
 // selection html 
 let selDOMElement = document.getElementById('fascia');
-console.log(selDOMElement.value);
+// console.log(selDOMElement.value);
 
 btnDOMElement.addEventListener('click', function () {
 
   // Mi recupero il valore dei km
   km = parseFloat(inputDOMElementKm.value);
-  console.log(km);
+  // console.log(km);
 
+   // -calcolo prezzo totale base
+let fullprice = km * priceForKm;
+// console.log('prezzo totale', fullprice)
 
   // Mi recupero o valori dei vari input
-  console.log(selDOMElement.value);
+  // console.log(selDOMElement.value);
 
   // Mi devo recuperare lo sconto da applicare eventualmente
   let fasciaValue = selDOMElement.value;
-  let fullprice;
+
 
   // Se fasciaValue è uguale a 0 applico lo sconto 20
   if (fasciaValue == 0) { // Minorenne
@@ -53,6 +59,8 @@ btnDOMElement.addEventListener('click', function () {
 
   // -aggiungo cifra con massimo due decimali
   finalPrice = finalPrice.toFixed(2);
-
+console.log(finalPrice)
   // Aggiorno l'innerHTML della pagina con il prezzo finale
+  final.innerHTML= ` prezzo finale: ${finalPrice}  ` 
 })
+
